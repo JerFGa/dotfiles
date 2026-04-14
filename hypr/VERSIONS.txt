@@ -1,0 +1,1 @@
+hyprutils: v0.12.0 | hyprlang: v0.6.8 | hyprpaper: v0.7.4

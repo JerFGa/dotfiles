@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 40,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "battery", "pulseaudio", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "active-only": false
+    },
+    
+    "network": {
+        "format-wifi": "{icon}", // Solo el icono por defecto
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"], // Iconos que cambian con la intensidad
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "Red: {essid}\nIP: {ipaddr}\nSeñal: {signalStrength}%"
+    },
+
+    "cpu": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Uso de CPU: {usage}%",
+        "on-click": "kitty -e btop" // Bonus: si haces clic, abre un monitor de procesos pro
+    },
+
+    "memory": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "RAM: {used:0.1f}GiB / {total:0.1f}GiB",
+        "on-click": "kitty -e btop"
+   	 }
+    }
+
+    "clock": {
+        "format": "  {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    }
+}

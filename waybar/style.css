@@ -1,0 +1,68 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #cdd6f4;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    background-color: #74c7ec;
+    color: #11111b;
+    border-radius: 5px;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
+    padding: 0 10px;
+    margin: 4px 0;
+    border-radius: 10px;
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+#clock {
+    background-color: #89b4fa;
+    color: #11111b;
+    font-weight: bold;
+}
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0px 10px;
+}
+
+#workspaces button {
+    color: rgba(205, 214, 244, 0.2); 
+    background: transparent;
+    padding: 0 5px;
+    border: none;
+    box-shadow: none;
+    /* Quitamos cualquier animación o transición 
+    transition: none;*/
+}
+
+#workspaces button.active {
+    color: rgba(205, 214, 244, 0.6);
+    font-weight: normal;
+    background: transparent;
+    border: none;    
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: rgba(205, 214, 244, 0.6);
+}
