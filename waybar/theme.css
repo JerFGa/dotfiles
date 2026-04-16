@@ -1,0 +1,12 @@
+@import "themes/catppuccin.css";
+
+@define-color main-bg @surface0;
+@define-color main-fg @text;
+@define-color bar-bg rgba(30, 30, 46, 0.8);
+@define-color wb-act-bg @mauve;
+@define-color wb-act-fg @crust;
+@define-color wb-hvr-bg @surface1;
+@define-color wb-hvr-fg @text;
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+}
